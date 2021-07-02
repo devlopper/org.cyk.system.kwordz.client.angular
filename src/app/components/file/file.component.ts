@@ -17,11 +17,11 @@ export class FileComponent implements OnInit {
   }
 
   files(): void {
-    this.fileService
+    /*this.fileService
         .files()
         .subscribe((response: any) => {
           this.allFiles = response.data;
-        });
+        });*/
   }
 
 }

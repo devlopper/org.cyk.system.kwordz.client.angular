@@ -7,11 +7,13 @@ import { DataTablesModule } from 'angular-datatables';
 
 import { HttpClientModule } from '@angular/common/http';
 import { FileComponent } from './components/file/file.component';
+import { ListComponent } from './components/file/list/list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FileComponent
+    FileComponent,
+    ListComponent
   ],
   imports: [
     BrowserModule,

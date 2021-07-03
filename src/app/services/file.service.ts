@@ -2,16 +2,19 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
+export interface File {
+  iddentifier : string;
+  name : string;
+}
+
 @Injectable({
   providedIn: 'root'
 })
 export class FileService {
 
-  private data:any = [];
-
   constructor(private http: HttpClient) { }
 
-  files(): Observable<any[]> {
+  files(): Observable<File[]> {
     //console.log(this.http.get('https://my-json-server.typicode.com/devlopper/org.cyk.system.kwordz.client.angular/files'));
     //return "Service has been called";
     
@@ -22,6 +25,6 @@ export class FileService {
       this.data = response
     });
     */
-    return this.http.get<any[]>(url);
+    return this.http.get<File[]>(url);
   }
 }

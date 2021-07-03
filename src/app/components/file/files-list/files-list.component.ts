@@ -1,17 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { FileService } from '../../../services/file.service';
-import { HttpClient } from '@angular/common/http';
 
 @Component({
-  selector: 'app-files',
-  templateUrl: './list.component.html',
-  styleUrls: ['./list.component.scss']
+  selector: 'app-files-list',
+  templateUrl: './files-list.component.html',
+  styleUrls: ['./files-list.component.scss']
 })
-export class ListComponent implements OnInit {
+export class FilesListComponent implements OnInit {
 
   files : any = [];
 
-  constructor(private service: FileService,private http: HttpClient) { }
+  constructor(private service: FileService) { }
 
   ngOnInit(): void {
     this.service.files().subscribe(

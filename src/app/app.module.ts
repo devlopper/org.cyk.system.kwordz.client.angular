@@ -8,12 +8,14 @@ import { DataTablesModule } from 'angular-datatables';
 import { HttpClientModule } from '@angular/common/http';
 import { FileComponent } from './components/file/file.component';
 import { ListComponent } from './components/file/list/list.component';
+import { FilesListComponent } from './components/file/files-list/files-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FileComponent,
-    ListComponent
+    ListComponent,
+    FilesListComponent
   ],
   imports: [
     BrowserModule,

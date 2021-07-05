@@ -13,7 +13,7 @@ export class FilesListComponent implements OnInit {
   constructor(private service: FileService) { }
 
   ngOnInit(): void {
-    this.service.files().subscribe(
+    this.service.get().subscribe(
       (response)=>{
         this.files = response;
       }

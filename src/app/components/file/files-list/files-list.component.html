@@ -1,20 +1,15 @@
-<div class="container">
-    <div class="card m-5 p-3">
-        <div class="card-body">
-            <table datatable class="row-border over">
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Name</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr *ngFor="let file of files">
-                        <td>{{ file.identifier }}</td>
-                        <td>{{ file.nameAndExtension }}</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-</div>
+<table datatable [dtOptions]="dataTableOptions" class="row-border hover">
+  <tbody *ngIf="files?.length != 0">
+    <tr *ngFor="let file of files; let i = index">
+      <td>
+        {{ i + 1 }} - {{ file.nameAndExtension }}
+        <a routerLink="/read-file-bytes/{{ file.identifier }}">Voir</a>
+      </td>
+    </tr>
+  </tbody>
+  <tbody *ngIf="files?.length == 0">
+    <tr>
+      <td colspan="2" class="no-data-available">No data!</td>
+    </tr>
+  </tbody>
+</table>

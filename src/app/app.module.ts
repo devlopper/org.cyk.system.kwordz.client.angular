@@ -8,12 +8,16 @@ import { DataTablesModule } from 'angular-datatables';
 
 import { HttpClientModule } from '@angular/common/http';
 import { FilesListComponent } from './components/file/files-list/files-list.component';
+import { FileBytesReaderComponent } from './components/file/file-bytes-reader/file-bytes-reader.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FilesListComponent
+    FilesListComponent,
+    FileBytesReaderComponent
   ],
   imports: [
     BrowserModule,

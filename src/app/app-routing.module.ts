@@ -4,12 +4,8 @@ import { FilesListComponent } from './components/file/files-list/files-list.comp
 import { FileBytesReaderComponent } from './components/file/file-bytes-reader/file-bytes-reader.component';
 
 const routes: Routes = [
-  {path: '/', redirectTo: '/list-files', pathMatch: 'full' },
-
-  {path: '123', redirectTo: '/'},
-
+  {path: '', redirectTo: '/list-files', pathMatch: 'full' },
   {path: 'list-files', component: FilesListComponent},
-
   {path: 'read-file-bytes/:id', component: FileBytesReaderComponent}
 ];
 

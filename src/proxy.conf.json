@@ -2,7 +2,7 @@
   "/api/*": {
     "target": "http://devkoms.com:9001",
     "secure": false,
-    "logLevel": "debug"
-    ,"changeOrigin": true
+    "logLevel": "debug",
+    "changeOrigin": true
   }
 }*/

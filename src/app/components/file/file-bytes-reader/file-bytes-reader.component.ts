@@ -9,12 +9,13 @@ import { Location } from '@angular/common';
 })
 export class FileBytesReaderComponent implements OnInit {
 
-  identifier:string = "";
+  url:any = "";
 
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    
+    this.url = "http://devkoms.com:9001/api/open/file/"+this.route.snapshot.paramMap.get('id')+"/download?isinline=true";
+    //this.route.snapshot.paramMap.get('id');
   }
 
   getDownloadUrl() : string {

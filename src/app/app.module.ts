@@ -10,7 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FilesListComponent } from './components/file/files-list/files-list.component';
 import { FileBytesReaderComponent } from './components/file/file-bytes-reader/file-bytes-reader.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { NgxDocViewerModule } from 'ngx-doc-viewer';
 import { RouterModule } from '@angular/router';
 
 @NgModule({
@@ -25,6 +25,7 @@ import { RouterModule } from '@angular/router';
     AppRoutingModule,
     DataTablesModule,
     HttpClientModule,
+    NgxDocViewerModule,
     BrowserAnimationsModule
   ],
   providers: [],

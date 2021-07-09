@@ -12,12 +12,14 @@ import { FileBytesReaderComponent } from './components/file/file-bytes-reader/fi
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgxDocViewerModule } from 'ngx-doc-viewer';
 import { RouterModule } from '@angular/router';
+import { AboutComponent } from './components/about/about.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FilesListComponent,
-    FileBytesReaderComponent
+    FileBytesReaderComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

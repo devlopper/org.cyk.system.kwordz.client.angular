@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FileService } from '../../../services/file.service';
 import { HttpClient } from '@angular/common/http';
+import { FileService } from '../../../services/file.service';
 
 class DataTablesResponse {
   data: any = [];

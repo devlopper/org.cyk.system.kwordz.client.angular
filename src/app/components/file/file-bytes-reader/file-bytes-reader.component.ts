@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
+import { FileService } from '../../../services/file.service';
 
 @Component({
   selector: 'app-file-bytes-reader',
@@ -11,16 +12,9 @@ export class FileBytesReaderComponent implements OnInit {
 
   url:any = "";
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private fileService : FileService,private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.url = "http://devkoms.com:9001/api/open/file/"+this.route.snapshot.paramMap.get('id')+"/download?isinline=true";
-    //this.route.snapshot.paramMap.get('id');
+    this.url = this.fileService.buildDownloadUrl(this.route.snapshot.paramMap.get('id'));
   }
-
-  getDownloadUrl() : string {
-    //this.identifier = this.route.snapshot.paramMap.get('id');
-    return '';
-  }
-
 }

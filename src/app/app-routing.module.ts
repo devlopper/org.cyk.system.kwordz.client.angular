@@ -8,11 +8,11 @@ const routes: Routes = [
   //{path: '', redirectTo: '/list-files', pathMatch: 'full' },
   {path: 'about', component: AboutComponent},
   {path: 'list-files', component: FilesListComponent},
-  {path: 'read-file-bytes/:id', component: FileBytesReaderComponent}
+  {path: 'read-file-bytes/:id/:url/:mime', component: FileBytesReaderComponent}
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes/*,{ useHash: true }*/)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

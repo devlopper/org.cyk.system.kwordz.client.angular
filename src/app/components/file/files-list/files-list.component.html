@@ -3,7 +3,7 @@
     <tr *ngFor="let file of files; let i = index">
       <td>
         {{ i + 1 }} - {{ file.nameAndExtension }}
-        <button mat-mini-fab color="primary" aria-label="See" routerLink="/read-file-bytes/{{ file.identifier }}/{{ encodeURIComponent(file.downloadLink) }}/{{ encodeURIComponent(file.mimeType) }}">
+        <button mat-icon-button aria-label="See" routerLink="/read-file-bytes/{{ file.identifier }}/{{ encodeURIComponent(file.downloadLink) }}/{{ encodeURIComponent(file.mimeType) }}">
           <mat-icon>pageview</mat-icon>
         </button>
       </td>

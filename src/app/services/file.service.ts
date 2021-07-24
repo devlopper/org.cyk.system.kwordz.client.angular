@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-const SERVER_URI = 'http://devkoms.com:9001/api/';
+const SERVER_URI = 'https://kwordz-api.devkoms.com/api/';
 const APIs_LOCATION = SERVER_URI+'open/file/';
 
 export interface File {

@@ -3,18 +3,16 @@
 	Retour à la liste
 </button>
 
-<div *ngIf="mime.startsWith('application/'); else elseBlock">
-	<ngx-doc-viewer 
-		url="{{ url }}" 
-		viewer="google"  
-		style="{{ style }}"
-	></ngx-doc-viewer>
-</div>
+<ng-container *ngIf="mime.startsWith('application/'); else elseIf2">
+	<ngx-doc-viewer url="{{ url }}" viewer="google"  style="{{ style }}"></ngx-doc-viewer>
+</ng-container>
+
+<ng-template #elseIf2>
+	<ng-container *ngIf="mime.startsWith('image/'); else elseBlock">
+		<img src="{{ url }}"/>
+	</ng-container>
+</ng-template>
 
 <ng-template #elseBlock>
-	<ngx-doc-viewer 
-		url="{{ url }}" 
-		viewer="url"  
-		style="{{ style }}"
-	></ngx-doc-viewer>
+	<ngx-doc-viewer [url]="url" viewer="url"  style="{{ style }}"></ngx-doc-viewer>
 </ng-template>
